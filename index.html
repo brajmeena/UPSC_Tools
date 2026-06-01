@@ -9,6 +9,23 @@
 <body>
 <h1>UPSC QCAB Generator</h1>
 
+<select id="yearFilter"></select>
+
+<select id="paperFilter">
+    <option>All</option>
+    <option>GS1</option>
+    <option>GS2</option>
+    <option>GS3</option>
+    <option>GS4</option>
+    <option>Essay</option>
+</select>
+
+<select id="topicFilter"></select>
+
+<button onclick="applyFilters()">
+Filter
+</button>
+  
 <textarea id="bulkInput" rows="12" placeholder="Q1. Explain Plate Tectonics. [15]"></textarea><br><br>
 <button onclick="importQuestions()">Import Questions</button>
 

@@ -19,10 +19,10 @@
     "marks":10
   }
 ]
-
+[
   let pyqDatabase = [];
 
-async function loadQuestions(){
+ async function loadQuestions(){
 
     const response =
         await fetch("questions.json");
@@ -35,4 +35,4 @@ async function loadQuestions(){
 
 loadQuestions();
 
-
+]

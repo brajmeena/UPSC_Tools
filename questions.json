@@ -19,20 +19,3 @@
     "marks":10
   }
 ]
-[
-  let pyqDatabase = [];
-
- async function loadQuestions(){
-
-    const response =
-        await fetch("questions.json");
-
-    pyqDatabase =
-        await response.json();
-
-    renderDatabase();
-}
-
-loadQuestions();
-
-]

@@ -93,3 +93,30 @@ function generatePDF(){
 
  pdf.save("UPSC_QCAB.pdf");
 }
+
+function renderDatabase(){
+
+    const div =
+      document.getElementById("pyqList");
+
+    div.innerHTML = "";
+
+    pyqDatabase.forEach(q => {
+
+        div.innerHTML += `
+        <div class="question-card">
+
+            <input type="checkbox"
+                value="${q.qno}">
+
+            <b>${q.qno}</b>
+
+            (${q.year})
+
+            ${q.question}
+
+            [${q.marks}]
+
+        </div>`;
+    });
+}

@@ -1,0 +1,4 @@
+body{font-family:Arial;margin:40px}
+textarea{width:100%}
+.question-card{border:1px solid #ccc;padding:10px;margin:10px 0}
+button{padding:10px 20px;margin:10px 0;cursor:pointer}

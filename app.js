@@ -43,7 +43,17 @@ function drawLayout(pdf,footer){
 
  pdf.setFontSize(9);
  pdf.text(footer,15,h-8);
- pdf.text("Candidates must not write on this margin",w-8,35,{angle:90});
+ pdf.setFontSize(8);
+
+pdf.text(
+  "Candidates must not write on this margin",
+  w - 6,
+  h / 2,
+  {
+    angle: 90,
+    align: "center"
+  }
+);
 }
 
 function drawQuestion(pdf,q){
@@ -51,9 +61,20 @@ function drawQuestion(pdf,q){
  pdf.text(q.qno,8,20);
 
  const wrapped=pdf.splitTextToSize(q.question,140);
- pdf.text(wrapped,30,20);
+ const questionLine =
+    `${q.question}    [${q.marks} Marks]`;
 
- pdf.text(`[${q.marks} Marks]`,140,35);
+const wrapped =
+    pdf.splitTextToSize(
+        questionLine,
+        140
+    );
+
+pdf.text(
+    wrapped,
+    30,
+    20
+);
 }
 
 function generatePDF(){

@@ -68,7 +68,7 @@ async function loadDatabase(){
     const response =
 
         await fetch(
-            "data/questions.json"
+            "./questions.json"
         );
 
 
@@ -382,7 +382,7 @@ try{
 
     const response =
         await fetch(
-            "data/questions.json"
+            "./questions.json"
         );
 
     database =
